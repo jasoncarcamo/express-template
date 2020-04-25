@@ -4,8 +4,10 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
 
-app.use(cors());
 app.use(morgan((NODE_ENV === "production") ? "tiny" : "common"));
+app.use(express.static("public"));
+app.use(cors());
+app.use(express.json());
 app.use(helmet());
 
 //Routes start here
