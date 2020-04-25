@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node ./src/app/server.js",
     "dev": "nodemon ./src/app/server.js",
+    "migrate-test": "postgrator --config ./test-migration.js",
+    "migrate-prod": "postgrator --config ./prod/migration.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
